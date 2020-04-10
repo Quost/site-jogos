@@ -56,7 +56,7 @@ body {
 h1.title {
     font-size: 2em;
     text-align: center;
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
     background: #eee;
     border: 2px solid #888;
     padding: 20px;
@@ -80,7 +80,7 @@ h1.title {
 }
 
 .ui-tabs-panel {
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
 }
 
 
@@ -96,7 +96,7 @@ h1.title {
 #header {
     width: 90%;
     text-align: center;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 
@@ -108,8 +108,8 @@ h1.title {
 top: 30px;
 left: 30px; */
     width: 943px;
-    margin: 0px auto;
-    min-height: 500px;
+    margin: 40px auto;
+    min-height: 600px;
 }
 
 @media screen and (max-width: 1070px) {
@@ -160,8 +160,7 @@ text-align: center; */
 }
 
 img.bg {
-    position: absolute;
-    left: 0;
+    position: absolute: left: 0;
     top: 0;
     z-index: 1;
 }
@@ -180,6 +179,8 @@ img.skintone {
     box-sizing: border-box;
     display: block;
     clear: both;
+    padding: 20px;
+    margin-top: -200px;
     font-size: 0.6em;
 }
 
@@ -199,7 +200,7 @@ padding: 0px 5px; */
     width: 254px;
     margin-top: -2px;
     padding: 10px;
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
     box-sizing: border-box;
 }
 
@@ -276,7 +277,7 @@ padding: 0px 5px; */
         margin: 0 auto;
     }
     #left {
-        /* margin-bottom: 40px; */
+        margin-bottom: 40px;
         overflow: hidden;
     }
     #right {
