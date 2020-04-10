@@ -1,0 +1,283 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background-color: #6d4711;
+   background: no-repeat center center fixed;
+   background-size: cover;
+   font-family: 'Shojumaru', cursive;
+   color: white;
+   cursor: -webkit-grab !important;
+}
+
+html.bg-victory{
+   background-image: url("../img/victory.jpg");
+}
+
+html.bg-finalboss{
+   background-image: url("../img/finalboss.jpg");
+}
+
+html.bg-gameover{
+   background-image: url("../img/gameover.jpg");
+}
+
+html.bg-principal{
+   background-image: url("../img/bg.jpg");
+}
+
+body {
+   text-shadow: 3px 2px 17px black;
+}
+
+.text-danger {
+   color: #ff7171;
+   font-size: 25px;
+}
+
+.swal2-popup .swal2-title,
+#swal2-content {
+   text-shadow: 0px 0px black;
+}
+
+.btn-recomecar {
+   padding: 20px 40px;
+   border-radius: 5px;
+   border: 3px solid white;
+   color: white;
+   font-size: 20px;
+   margin-top: 20px;
+   font-family: 'Shojumaru', cursive;
+   background: #6d47127a;
+   transition: .2s;
+   -moz-transition: .2s;
+   -o-transition: .2s;
+   -ms-transition: .2s;
+}
+
+.btn-recomecar:hover {
+   background-color: #ea931a;
+}
+
+.display-none {
+   display: none !important;
+}
+
+.gameover {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column
+}
+
+.climax,
+.littleclimax {
+   position: fixed;
+   background: white;
+   z-index: 2;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   pointer-events: none;
+}
+
+.climax {
+   animation: climax 1s linear forwards;
+   -webkit-animation: climax 1s linear forwards;
+   -moz-animation: climax 1s linear forwards;
+   -o-animation: climax 1s linear forwards;
+   -ms-animation: climax 1s linear forwards;
+}
+
+.littleclimax {
+   animation: littleclimax 1s linear forwards;
+   -webkit-animation: littleclimax 1s linear forwards;
+   -moz-animation: littleclimax 1s linear forwards;
+   -o-animation: littleclimax 1s linear forwards;
+   -ms-animation: littleclimax 1s linear forwards;
+}
+
+.container {
+   background: #5d340042;
+   padding: 30px;
+   border-radius: 10px;
+   border: solid 1px #6d4711;
+   border-top: solid 7px #6d4712;
+   width: 600px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+
+.container-shuriken {
+   position: relative;
+   display: flex;
+   flex-grow: 1;
+   height: 300px;
+   align-items: center;
+   justify-content: center;
+}
+
+.shuriken {
+   height: 250px;
+   width: 250px;
+   transition: .1s;
+   -moz-transition: .1s;
+   -o-transition: .1s;
+   -ms-transition: .1s;
+   background-image: url("../img/shuriken.svg");
+   background-size: cover;
+   animation: rotate 2s linear infinite;
+   -webkit-animation: rotate 2s linear infinite;
+   -moz-animation: rotate 2s linear infinite;
+   -o-animation: rotate 2s linear infinite;
+   -ms-animation: rotate 2s linear infinite;
+   
+}
+
+.game-ico {
+   width: 15px;
+   height: 15px;
+   display: inline-block;
+}
+
+.shuriken:active {
+   height: 200px;
+   width: 200px;
+}
+
+.shake {
+   animation: shake 0.1s;
+   -webkit-animation: shake 0.1s;
+   -moz-animation: shake 0.1s;
+   -o-animation: shake 0.1s;
+   -ms-animation: shake 0.1s;
+}
+
+.welcome {
+   text-align: center;
+}
+
+.message {
+   position: absolute;
+   display: flex;
+   width: 100%;
+   top: 60%;
+   left: 0;
+   justify-content: center;
+   padding: 10px;
+   pointer-events: none;
+   border-radius: 5px;
+   background: rgba(0, 0, 0, 0.171);
+   color: white;
+   opacity: 0;
+   animation: up 2s;
+   -webkit-animation: up 2s;
+   -moz-animation: up 2s;
+   -o-animation: up 2s;
+   -ms-animation: up 2s;
+}
+
+.btn-kagebunshin,
+.btn-rasengan,
+.btn-rasenshuriken {
+   height: 100px;
+   width: 100px;
+   background-image: url("../img/btn.svg");
+   background-size: cover;
+}
+
+.btn-kagebunshin img {
+   margin-top: 10px;
+   width: 70px;
+   height: 70px;
+}
+
+.btn-kagebunshin:active img,
+.btn-rasengan:active img,
+.btn-rasenshuriken:active img {
+   padding: 10px;
+}
+
+.container-btns {
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: row;
+}
+
+.container-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-grow: 1;
+}
+
+.container-btn img.action-ico {
+   transition: .2s;
+   -moz-transition: .2s;
+   -o-transition: .2s;
+   -ms-transition: .2s;
+   width: 100%;
+}
+
+.container-btn p {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+
+.container-info {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.container-info-left {
+   display: flex;
+   flex-direction: column;
+}
+
+.container-info-right {
+   display: flex;
+   flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+   body,
+   .container {
+      width: 100%;
+   }
+   .container-info {
+      flex-direction: row;
+      font-size: 13px;
+   }
+   .container-btns {
+      font-size: 12px;
+      font-weight: bold;
+      font-family: Segoe Ui, sans-serif;
+   }
+   .btn-kagebunshin img {
+      height: 53px;
+   }
+   .btn-kagebunshin,
+   .btn-rasengan,
+   .btn-rasenshuriken {
+      height: 80px;
+      width: 80px;
+   }
+   html {
+      height: auto;
+   }
+}

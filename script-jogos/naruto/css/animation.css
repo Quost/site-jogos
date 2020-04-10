@@ -1,0 +1,54 @@
+@keyframes rotate {
+   100% {
+      transform: rotate(360deg)
+   }
+}
+
+@keyframes up {
+   0% {
+      top: 60%;
+      opacity: 0;
+   }
+   30% {
+      opacity: 1;
+   }
+   100% {
+      top: 40%;
+      opacity: 0;
+   }
+}
+
+@keyframes climax {
+   0% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+      display: none;
+   }
+}
+
+@keyframes littleclimax {
+   0% {
+      opacity: .3;
+   }
+   100% {
+      opacity: 0;
+      display: none;
+   }
+}
+
+@keyframes shake {
+   0% {
+      transform: translate3d(-2px, 0, 0);
+   }
+   30% {
+      transform: translate3d(2px, 0, 0);
+   }
+   60% {
+      transform: translate3d(-2px, 0, 0);
+   }
+   100% {
+      transform: translate3d(0px, 0, 0);
+   }
+}
