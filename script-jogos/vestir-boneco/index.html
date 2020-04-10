@@ -1,153 +1,185 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML">
 <html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-	<title>TWP - pixel dressup ^_^</title>
-	<link rel="stylesheet" type="text/css" href="styles/mainstylesheet.css" charset="utf-8">
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-<script src="scripts/drag.js"></script>
-<script src="scripts/touchpunch.js"></script>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TWP - pixel dressup ^_^</title>
+    <link rel="stylesheet" type="text/css" href="styles/mainstylesheet.css" charset="utf-8">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+    <script src="scripts/drag.js"></script>
+    <script src="scripts/touchpunch.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-163263342-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-9278165302180733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body>
 
-	<div id="dollmaker_container">
-		<div id="header">
-			<img src="images/logo.png"/>
-		</div>
-		<div id="left">
-			<div id="bodyArea" class="ui-corner-all">
-			<img class="bg" src="base/Background/full/pink.png" alt="Background">	
-			<img class="skintone" src="base/Skintone/full/light.png" alt="BaseBody">
-			</div>
-			
-			<div id="swatchesArea" class="ui-corner-all">
-				<h3>Background:</h3>
-				<a href="base/Background/full/pink.png" class="bg"><img src="base/Background/thumbnails/pink.png" alt="swatch"></a> 
-				<a href="base/Background/full/green.png" class="bg"><img src="base/Background/thumbnails/green.png" alt="swatch"></a>
-				<a href="base/Background/full/blue.png" class="bg"><img src="base/Background/thumbnails/blue.png" alt="swatch"></a>
-				<a href="base/Background/full/yellow.png" class="bg"><img src="base/Background/thumbnails/yellow.png" alt="swatch"></a>
+    <div id="dollmaker_container">
+        <div id="left">
+            <div id="bodyArea" class="ui-corner-all">
+                <img class="bg" src="base/Background/full/pink.png" alt="Background">
+                <img class="skintone" src="base/Skintone/full/light.png" alt="BaseBody">
+            </div>
+
+            <div id="swatchesArea" class="ui-corner-all">
+                <h3>Background:</h3>
+                <a href="base/Background/full/pink.png" class="bg"><img src="base/Background/thumbnails/pink.png" alt="swatch"></a>
+                <a href="base/Background/full/green.png" class="bg"><img src="base/Background/thumbnails/green.png" alt="swatch"></a>
+                <a href="base/Background/full/blue.png" class="bg"><img src="base/Background/thumbnails/blue.png" alt="swatch"></a>
+                <a href="base/Background/full/yellow.png" class="bg"><img src="base/Background/thumbnails/yellow.png" alt="swatch"></a>
 
 
-				<h3>Skintone:</h3>
-				<a href="base/Skintone/full/lightest.png" class="skintone"><img src="base/Skintone/thumbnails/lightest.png" alt="swatch"></a> 
-				<a href="base/Skintone/full/light.png" class="skintone"><img src="base/Skintone/thumbnails/light.png" alt="swatch"></a>
-				<a href="base/Skintone/full/medium.png" class="skintone"><img src="base/Skintone/thumbnails/medium.png" alt="swatch"></a>
-				<a href="base/Skintone/full/dark.png" class="skintone"><img src="base/Skintone/thumbnails/dark.png" alt="swatch"></a>
-				<a href="base/Skintone/full/darkest.png" class="skintone"><img src="base/Skintone/thumbnails/darkest.png" alt="swatch"></a>
-			</div>
-		</div>
-		<div id="right">
-			<div id="piecesArea">
-				<ul id="tabsbar">
-					<li><a href="#tabs-2">Hair</a></li>
-					<li><a href="#tabs-3">Tops</a></li>
-					<li><a href="#tabs-4">Bottoms</a></li>
-					<li><a href="#tabs-5">Dresses</a></li>
-					<li><a href="#tabs-6">Accessories</a></li>
-				</ul>
-				
-				<!-- **EDIT HERE** 
+                <h3>Skintone:</h3>
+                <a href="base/Skintone/full/lightest.png" class="skintone"><img src="base/Skintone/thumbnails/lightest.png" alt="swatch"></a>
+                <a href="base/Skintone/full/light.png" class="skintone"><img src="base/Skintone/thumbnails/light.png" alt="swatch"></a>
+                <a href="base/Skintone/full/medium.png" class="skintone"><img src="base/Skintone/thumbnails/medium.png" alt="swatch"></a>
+                <a href="base/Skintone/full/dark.png" class="skintone"><img src="base/Skintone/thumbnails/dark.png" alt="swatch"></a>
+                <a href="base/Skintone/full/darkest.png" class="skintone"><img src="base/Skintone/thumbnails/darkest.png" alt="swatch"></a>
+            </div>
+        </div>
+        <div id="right">
+            <div id="piecesArea">
+                <ul id="tabsbar">
+                    <li><a href="#tabs-2">Hair</a></li>
+                    <li><a href="#tabs-3">Tops</a></li>
+                    <li><a href="#tabs-4">Bottoms</a></li>
+                    <li><a href="#tabs-5">Dresses</a></li>
+                    <li><a href="#tabs-6">Accessories</a></li>
+                </ul>
+
+                <!-- **EDIT HERE** 
 					    These divs correspond the the content of each tab. Put all the img tags
 					    for your props in them, corresponding to their categories. 
 				-->
-				
-				<div id="tabs-2"><!--Hair-->
-					<img alt="" src="images/1Hair/hair-bun-blonde.png" id="go">
-					<img alt="" src="images/1Hair/hair-bun-brown.png" id="go">
-					<img alt="" src="images/1Hair/hair-bun-ginger.png">
-					<img alt="" src="images/1Hair/hair-bun-red.png">
-					<img alt="" src="images/1Hair/hair-long-blonde.png">
-					<img alt="" src="images/1Hair/hair-long-brown.png">
-					<img alt="" src="images/1Hair/hair-long-ginger.png">
-					<img alt="" src="images/1Hair/hair-short-brown.png">
-					<img alt="" src="images/1Hair/hair-short-dipgreen.png">
-					<img alt="" src="images/1Hair/hair-straight-dipblue.png">
-					<img alt="" src="images/1Hair/hair-straight-dippink.png">
-					<img alt="" src="images/1Hair/hair-straight-blonde.png">
-					<img alt="" src="images/1Hair/hair-straight-brown.png">
-					<img alt="" src="images/1Hair/hair-straight-pink.png">
-					<img alt="" src="images/1Hair/hair-straight-red.png">
-					<img alt="" src="images/1Hair/hair-nofringe-blonde.png">
-					<img alt="" src="images/1Hair/hair-nofringe-brown.png">
-					<img alt="" src="images/1Hair/hair-nofringe-black.png">
-				</div>
-				<div id="tabs-3"><!--Tops-->
-					<img alt="" src="images/2Tops/top_egg.png">
-					<img alt="" src="images/2Tops/top-bean.png">
-					<img alt="" src="images/2Tops/top_polka_grey.png">
-					<img alt="" src="images/2Tops/top_polka_white.png">
-					<img alt="" src="images/2Tops/top_cable_blue.png">
-					<img alt="" src="images/2Tops/top_cable_pink.png">
-					<img alt="" src="images/2Tops/top_check.png">
-					<img alt="" src="images/2Tops/top_coral.png">
-					<img alt="" src="images/2Tops/top_pleated_silver.png">
-					<img alt="" src="images/2Tops/top-bagel-white.png">
-					<img alt="" src="images/2Tops/top-bagel-navy.png">
 
-				</div>
-				<div id="tabs-4"><!--Bottoms-->
-					<img alt="" src="images/3Bottoms/skirt_egg.png">
-					<img alt="" src="images/3Bottoms/skirt-bean.png">
-					<img alt="" src="images/3Bottoms/skirt_flared_red.png">
-					<img alt="" src="images/3Bottoms/skirt-flared-blue.png">
-					<img alt="" src="images/3Bottoms/skirt_pleated_silver.png">
-					<img alt="" src="images/3Bottoms/leggings_check.png">
-					<img alt="" src="images/3Bottoms/leggings_polka_grey.png">
-					<img alt="" src="images/3Bottoms/leggings_polka_lilac.png">
-					<img alt="" src="images/3Bottoms/leggings_stormy.png">
-					<img alt="" src="images/3Bottoms/tights_black.png">
-				</div>
-					<div id="tabs-5"><!--Dresses-->
-					<img alt="" src="images/4Dresses/dress_polka_black.png">
-					<img alt="" src="images/4Dresses/dress_polka_white.png">
-					<img alt="" src="images/4Dresses/dress_sequin.png">
-					<img alt="" src="images/4Dresses/dress-polka-pink.png">
-					<img alt="" src="images/4Dresses/dress-polka-organza-black.png">
-					<img alt="" src="images/4Dresses/dress_shimmer.png">
-					<img alt="" src="images/4Dresses/dress_overall_black.png">
-					<img alt="" src="images/4Dresses/dress_overall_beige.png">
-					<img alt="" src="images/4Dresses/jumpsuit_polka.png">
-					<img alt="" src="images/4Dresses/dress-smock-navy.png">
-					<img alt="" src="images/4Dresses/dress-smock-mustard.png">
-					<img alt="" src="images/4Dresses/dress-smock-lilac.png">
-					<img alt="" src="images/4Dresses/dress-panel-red.png">
-					<img alt="" src="images/4Dresses/dress-panel-lilac.png">
-					<img alt="" src="images/4Dresses/dress-dungaree-black.png">
-					<img alt="" src="images/4Dresses/dress-dungaree-tan.png">
-					<img alt="" src="images/4Dresses/dress-spaghetti-black.png">
-					<img alt="" src="images/4Dresses/dress-spaghetti-white.png">
-				</div>
-				<div id="tabs-6"><!--Accessories-->
-					<img alt="" src="images/5Accessories/boots-black.png">
-					<img alt="" src="images/5Accessories/boots-ivory.png">
-					<img alt="" src="images/5Accessories/boots-lilac.png">
-					<img alt="" src="images/5Accessories/boots-pink.png">
-					<img alt="" src="images/5Accessories/shoes-black.png">
-					<img alt="" src="images/5Accessories/shoes-mustard.png">
-					<img alt="" src="images/5Accessories/shoes-grey.png">
-					<img alt="" src="images/5Accessories/socks-grey.png">
-					<img alt="" src="images/5Accessories/socks-mint.png">
-					<img alt="" src="images/5Accessories/socks-mustard.png">
-					<img alt="" src="images/5Accessories/socks-black.png">
-					<img alt="" src="images/5Accessories/glasses-lightest.png">
-					<img alt="" src="images/5Accessories/glasses-light.png">
-					<img alt="" src="images/5Accessories/glasses-medium.png">
-					<img alt="" src="images/5Accessories/glasses-dark.png">
-					<img alt="" src="images/5Accessories/glasses-darkest.png">
+                <div id="tabs-2">
+                    <!--Hair-->
+                    <img alt="" src="images/1Hair/hair-bun-blonde.png" id="go">
+                    <img alt="" src="images/1Hair/hair-bun-brown.png" id="go">
+                    <img alt="" src="images/1Hair/hair-bun-ginger.png">
+                    <img alt="" src="images/1Hair/hair-bun-red.png">
+                    <img alt="" src="images/1Hair/hair-long-blonde.png">
+                    <img alt="" src="images/1Hair/hair-long-brown.png">
+                    <img alt="" src="images/1Hair/hair-long-ginger.png">
+                    <img alt="" src="images/1Hair/hair-short-brown.png">
+                    <img alt="" src="images/1Hair/hair-short-dipgreen.png">
+                    <img alt="" src="images/1Hair/hair-straight-dipblue.png">
+                    <img alt="" src="images/1Hair/hair-straight-dippink.png">
+                    <img alt="" src="images/1Hair/hair-straight-blonde.png">
+                    <img alt="" src="images/1Hair/hair-straight-brown.png">
+                    <img alt="" src="images/1Hair/hair-straight-pink.png">
+                    <img alt="" src="images/1Hair/hair-straight-red.png">
+                    <img alt="" src="images/1Hair/hair-nofringe-blonde.png">
+                    <img alt="" src="images/1Hair/hair-nofringe-brown.png">
+                    <img alt="" src="images/1Hair/hair-nofringe-black.png">
+                </div>
+                <div id="tabs-3">
+                    <!--Tops-->
+                    <img alt="" src="images/2Tops/top_egg.png">
+                    <img alt="" src="images/2Tops/top-bean.png">
+                    <img alt="" src="images/2Tops/top_polka_grey.png">
+                    <img alt="" src="images/2Tops/top_polka_white.png">
+                    <img alt="" src="images/2Tops/top_cable_blue.png">
+                    <img alt="" src="images/2Tops/top_cable_pink.png">
+                    <img alt="" src="images/2Tops/top_check.png">
+                    <img alt="" src="images/2Tops/top_coral.png">
+                    <img alt="" src="images/2Tops/top_pleated_silver.png">
+                    <img alt="" src="images/2Tops/top-bagel-white.png">
+                    <img alt="" src="images/2Tops/top-bagel-navy.png">
 
-				
-				</div>
-				
-			</div><!--PiecesArea-->			
-		</div>
-	</div><!--container-->
-	<div class="footer">
-		<p>&copy; Emma Winston 2014 under an MIT Open Source License. Merry Christmas!</p>
-	</div>
+                </div>
+                <div id="tabs-4">
+                    <!--Bottoms-->
+                    <img alt="" src="images/3Bottoms/skirt_egg.png">
+                    <img alt="" src="images/3Bottoms/skirt-bean.png">
+                    <img alt="" src="images/3Bottoms/skirt_flared_red.png">
+                    <img alt="" src="images/3Bottoms/skirt-flared-blue.png">
+                    <img alt="" src="images/3Bottoms/skirt_pleated_silver.png">
+                    <img alt="" src="images/3Bottoms/leggings_check.png">
+                    <img alt="" src="images/3Bottoms/leggings_polka_grey.png">
+                    <img alt="" src="images/3Bottoms/leggings_polka_lilac.png">
+                    <img alt="" src="images/3Bottoms/leggings_stormy.png">
+                    <img alt="" src="images/3Bottoms/tights_black.png">
+                </div>
+                <div id="tabs-5">
+                    <!--Dresses-->
+                    <img alt="" src="images/4Dresses/dress_polka_black.png">
+                    <img alt="" src="images/4Dresses/dress_polka_white.png">
+                    <img alt="" src="images/4Dresses/dress_sequin.png">
+                    <img alt="" src="images/4Dresses/dress-polka-pink.png">
+                    <img alt="" src="images/4Dresses/dress-polka-organza-black.png">
+                    <img alt="" src="images/4Dresses/dress_shimmer.png">
+                    <img alt="" src="images/4Dresses/dress_overall_black.png">
+                    <img alt="" src="images/4Dresses/dress_overall_beige.png">
+                    <img alt="" src="images/4Dresses/jumpsuit_polka.png">
+                    <img alt="" src="images/4Dresses/dress-smock-navy.png">
+                    <img alt="" src="images/4Dresses/dress-smock-mustard.png">
+                    <img alt="" src="images/4Dresses/dress-smock-lilac.png">
+                    <img alt="" src="images/4Dresses/dress-panel-red.png">
+                    <img alt="" src="images/4Dresses/dress-panel-lilac.png">
+                    <img alt="" src="images/4Dresses/dress-dungaree-black.png">
+                    <img alt="" src="images/4Dresses/dress-dungaree-tan.png">
+                    <img alt="" src="images/4Dresses/dress-spaghetti-black.png">
+                    <img alt="" src="images/4Dresses/dress-spaghetti-white.png">
+                </div>
+                <div id="tabs-6">
+                    <!--Accessories-->
+                    <img alt="" src="images/5Accessories/boots-black.png">
+                    <img alt="" src="images/5Accessories/boots-ivory.png">
+                    <img alt="" src="images/5Accessories/boots-lilac.png">
+                    <img alt="" src="images/5Accessories/boots-pink.png">
+                    <img alt="" src="images/5Accessories/shoes-black.png">
+                    <img alt="" src="images/5Accessories/shoes-mustard.png">
+                    <img alt="" src="images/5Accessories/shoes-grey.png">
+                    <img alt="" src="images/5Accessories/socks-grey.png">
+                    <img alt="" src="images/5Accessories/socks-mint.png">
+                    <img alt="" src="images/5Accessories/socks-mustard.png">
+                    <img alt="" src="images/5Accessories/socks-black.png">
+                    <img alt="" src="images/5Accessories/glasses-lightest.png">
+                    <img alt="" src="images/5Accessories/glasses-light.png">
+                    <img alt="" src="images/5Accessories/glasses-medium.png">
+                    <img alt="" src="images/5Accessories/glasses-dark.png">
+                    <img alt="" src="images/5Accessories/glasses-darkest.png">
+
+
+                </div>
+
+            </div>
+            <!--PiecesArea-->
+        </div>
+    </div>
+    <!--container-->
+    <div class="footer">
+        <center>
+            <form style="display:flex;align-items:flex-start;align-items:flex-start;" action="/site-jogos/index.html">
+                <input type="submit" value="Voltar para o Menu de jogos" />
+            </form>
+        </center>
+    </div>
 </body>
+
 </html>
