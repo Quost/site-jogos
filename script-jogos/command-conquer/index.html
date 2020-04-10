@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Command and Conquer - Tiberian Dawn - HTML5</title>
+    <link rel="shortcut icon" href="http://www.adityaravishankar.com/favicon.ico" />
+    <link href="http://www.adityaravishankar.com/projects/games/command-and-conquer/" rel="canonical" />
+    <meta property='fb:app_id' content='268072089881146' />
+    <meta property='og:title' content='Command and Conquer - Tiberian Dawn - HTML5' />
+    <meta property='og:url' content='http://www.adityaravishankar.com/projects/games/command-and-conquer/' />
+    <meta property='og:image' content='http://www.adityaravishankar.com/projects/games/command-and-conquer/images/logo.jpg' />
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-9278165302180733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style type="text/css">
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        
+        canvas {
+            border: 1px solid white;
+            cursor: url(images/cursors/blank.gif), none !important;
+            background-image: url(images/loading.gif), url(images/htitle.jpeg);
+            background-position: center bottom, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+        
+        #debugger {
+            border: 1px solid white;
+            font-size: 12px;
+            padding: 5px;
+            overflow: auto;
+            height: 400px;
+        }
+        
+        #specialcontrols {
+            display: none;
+        }
+        
+        @font-face {
+            font-family: 'Command and Conquer';
+            src: url('images/sidebar/cnc.ttf');
+        }
+        
+        div {
+            border: 0px solid red;
+        }
+        
+        #leftcontent {
+            float: left;
+            width: 450px;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        #rightcontent {
+            float: left;
+            width: 640px;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        #rightmostcontent {
+            text-align: left;
+            float: right;
+            margin: 10px;
+            margin-top: 0px;
+            vertical-align: middle;
+            display: none;
+        }
+        
+        H1 {
+            color: yellow;
+            text-align: left;
+        }
+        
+        #header {
+            padding-bottom: 20px;
+        }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <!--script src="js/jquery.min.js"	 type="text/javascript" charset="utf-8"></script-->
+    <script src="js/cnc-v0.3d.js" type="text/javascript" charset="utf-8">
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['t1._setAccount', 'UA-9874019-1']);
+        _gaq.push(['t1._trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <canvas id="canvas" width="640" height="535">
+				Your browser does not support the HTML5 Canvas feature. This game uses new HTML5 features and will only work on the latest versions of Firefox, Safari or Chrome (and maybe Internet Explorer 9).			
+			</canvas>
+
+    </div>
+    <br>
+    <div>
+        <form style="display:flex;justify-content:center;align-items:center;" action="/index.html">
+            <input type="submit" value="Voltar para o Menu de jogos" />
+        </form>
+    </div>
+
+</body>
+
+</html>

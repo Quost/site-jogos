@@ -1,0 +1,76 @@
+﻿
+Leia-me.txt
+
+
+
+
+  █  Criado em: 10/11/2009
+  █  Última atualização: 16/11/2009
+  █  Autor: Gabriel Barros
+  █  www.gabrielbarros.com.br (site disponível a partir de 18/11/2009)
+  █  contato@gabrielbarros.com.br
+
+
+
+
+  ===================
+    Vizinhança Certa
+  ===================
+
+  >> Este script foi exaustivamente testado, mas pode ser
+  que ainda haja erros. Se encontrar algum bug, um algoritmo
+  mais eficiente ou se quiser fazer um elogio ou uma crítica,
+  por favor entre em contato através do site ou e-mail acima.
+
+  >> Sinta-se à vontade para editar este script como desejar,
+  só que se for publicar em algum site com conteúdo para
+  desenvolvedores, lembre-se de fornecer os devidos créditos.
+ 
+  >> Há mais scripts em www.codigofonte.net/~gbarros
+
+  >> Acesse o codigofonte.net regularmente e fique por dentro
+  do que há de melhor no mundo da programação web. Em pouco tempo,
+  você conseguirá obter grandes resultados. Boa sorte.
+
+
+
+
+
+
+  =================================
+    DESCRIÇÃO/ INSTRUÇÕES DE USO:
+  =================================
+
+
+  Este é um simples jogo de lógica, cujo objetivo é ganhar o maior número de pontos possíveis.
+  Você deve pintar os quadrados com as cores adequadas, de acordo com a tabela de pontos:
+
+  AMARELO: 1000 pontos
+  VERDE: 100 pontos
+  VERMELHO: 10 pontos
+  AZUL: 1 ponto
+
+
+  Mas, atente-se às regras:
+
+  - AZUL em qualquer quadrado;
+  - VERMELHO somente ao lado de AZUL;
+  - VERDE somente ao lado de AZUL e VERMELHO;
+  - AMARELO somente ao lado de AZUL, VERMELHO e VERDE;
+
+  Porém, depois que você tiver pintado um bloco, os blocos adjacentes podem ser alterados normalmente;
+
+  Para verificar se um quadrado pode receber determinada cor, passe o mouse sobre a mesma, no topo da página;
+
+  Se a borda "acender", você pode pintar bastando clicar sobre o alvo;
+
+
+  Dúvidas?! Veja um exemplo em http://www.gabrielbarros.com.br/temp/exemplo-do-jogo-vizinhanca-certa.zip
+
+  Tente obter cada vez mais pontos e desafie todos.
+
+
+  Estude bem o script e ganhe conhecimento! :)
+
+
+  
