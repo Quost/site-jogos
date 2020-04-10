@@ -1,0 +1,25 @@
+{
+  "name": "udacity-fliperama-classico",
+  "version": "1.0.0",
+  "description": "Projeto - Fliperama Clássico",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guipex/udacity-fliperama-classico.git"
+  },
+  "keywords": [
+    "fliperama"
+  ],
+  "author": "Guilherme Guain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guipex/udacity-fliperama-classico/issues"
+  },
+  "homepage": "https://github.com/guipex/udacity-fliperama-classico#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
