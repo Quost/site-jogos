@@ -3,12 +3,35 @@
 
 <head>
     <title>Galeria de Jogos Javascript</title>
-    <meta charset="utf-8">
+
+    <!-- Ícone do Título da Página no Navegador-->
+    <link rel="icon" type="image/png" href="img/icon.png" />
+
+    <!-- Meta tags utilizadas pelo navegador e pelo google -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="all" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="language" content="pt-br" />
+    <meta property="locale" content="pt-br" />
+    <meta name="content-language" content="portuguese" />
+    <meta name="doc-class" content="completed" />
+    <meta name="description" content="Galeria de jogos desenvolvidos em javascript">
+    <meta name="abstract" content="Galeria de Jogos em Javascript" />
+    <meta name="keywords" content="jogos, games, game, javascript, html, snake, tictactoe, flappy bird, battleship, batalha naval, jogo da velha, jogo da cobra" />
+    <meta name="title" content="Jogos Beronguenta" />
+    <meta name="identifier-url" content="https://quost.github.io/site-jogos/" />
+    <meta itemprop="url" content="https://quost.github.io/site-jogos/">
+    <meta name="author" content="M2 Solutions" />
+    <!-- M2 Solutions:          https://quost.github.io -->
+    <meta name="reply-to" content="matheusquost+m2Solutions@gmail.com" />
+
+    <!-- Importações -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,7 +41,7 @@
 
     <style>
         body {
-            background-color: #152836
+            background-color: #2e1536
         }
         
         h2 {
@@ -78,111 +101,111 @@
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/exo/src/index.html">
+                        <img class="img-responsive" src="img/exo.png">
+                        <small><center>Exo</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/flappy-bird/index.html">
+                        <img class="img-responsive" src="img/flappy.png">
+                        <small><center>Flappy Bird</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/flappy-bird-original/index.html">
+                        <img class="img-responsive" src="img/flappyOrig.png">
+                        <small><center>Flappy Bird Original</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="script-jogos/adivinha-numero/numeros-magicos.html">
-                        <img class="img-responsive" src="img/adiv-num.jpeg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/guess-what/guess-what.html">
+                        <img class="img-responsive" src="img/guess-whats.png">
+                        <small><center>Guess What</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-cobra/cobrinha.html">
+                        <img class="img-responsive" src="img/snake.png">
+                        <small><center>Cobrinha</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-cobra-2/index.html">
+                        <img class="img-responsive" src="img/snake2.png">
+                        <small><center>Cobrinha 2</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-cobra-3/index.html">
+                        <img class="img-responsive" src="img/snake3.png">
+                        <small><center>Cobrinha 3</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-memoria/index.html">
+                        <img class="img-responsive" src="img/memória.png">
+                        <small><center>Jogo da Memória</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="script-jogos/adivinha-numero/numeros-magicos.html">
-                        <img class="img-responsive" src="img/adiv-num.jpeg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-velha/Jogo_da_velha.html">
+                        <img class="img-responsive" src="img/jogoVelha.png">
+                        <small><center>Jogo da Velha</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/jogo-velha-completo/index.html">
+                        <img class="img-responsive" src="img/jogoVelha2.png">
+                        <small><center>Jogo da Velha 2</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/2048/index.html">
+                        <img class="img-responsive" src="img/2048.png">
+                        <small><center>2048</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/off-the-line/index.html">
+                        <img class="img-responsive" src="img/offtheline.png">
+                        <small><center>Off the line</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/ping-pong/index.html">
+                        <img class="img-responsive" src="img/pingpong.png">
+                        <small><center>Ping Pong</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="script-jogos/adivinha-numero/numeros-magicos.html">
-                        <img class="img-responsive" src="img/adiv-num.jpeg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/pop-color/popcolor.html">
+                        <img class="img-responsive" src="img/popcolor.png">
+                        <small><center>Pop Color</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/skifree/index.html">
+                        <img class="img-responsive" src="img/skifree.png">
+                        <small><center>Ski Free</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/tetris/index.html">
+                        <img class="img-responsive" src="img/tetris.png">
+                        <small><center>Tetris</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/Vestir/index.html">
+                        <img class="img-responsive" src="img/vestir.png">
+                        <small><center>Vestir o Coelho</center></small>
                     </a>
                 </li>
                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                        <small><center>Adivinhe o número</center></small>
+                    <a href="script-jogos/vizinhanca-certa/vizinhanca-certa.html">
+                        <img class="img-responsive" src="img/vizCerta.png">
+                        <small><center>Vizinhança Certa</center></small>
                     </a>
                 </li>
             </ul>
@@ -195,6 +218,12 @@
     </script>
 
     <script src="script.js"></script>
+
+    <footer align="center">
+        <p style="align-content: center; color: rgb(182, 122, 122);">
+            Desenvolvido por <a href="https://quost.github.io/M2-Solutions/" style="color: whitesmoke;" target="_blank">M2 Solutions</a>
+        </p>
+    </footer>
 </body>
 
 </html>

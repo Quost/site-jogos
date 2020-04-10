@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-9278165302180733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>Guess What - Jogo de adivinhação</title>
+
+    <style type="text/css">
+        .superior {
+            background-color: #C12062;
+            color: #FFFFFF
+        }
+        
+        table {
+            border: inset 3px #000000;
+            background-color: #DFDFDF;
+        }
+        
+        body {
+            font: 13px 'Trebuchet MS', 'Segoe UI', Verdana, sans-serif;
+            background-color: #EFEFFE;
+        }
+        
+        .titulo {
+            font: small-caps 25px Tahoma, sans-serif;
+            color: #255681;
+            background-color: #EFEFEF
+        }
+    </style>
+
+    <script type="text/javascript">
+        n = new Array
+        n[1] = "muito fácil";
+        n[2] = "fácil";
+        n[3] = "médio";
+        n[4] = "difícil";
+        n[5] = "muito difícil";
+        n[6] = "quase impossível";
+
+        nivel = 1; // nível padr�o
+        max = 10; // Escolha m�xima padr�o do usu�rio
+        Pensar(); // O PC "pensa" em um número dentro do intervalo solicitado  
+
+        function Pensar() {
+            numeroSecreto = Math.round(Math.random() * max); // F�rmula que o PC usa para "pensar" num número
+            contador = 0; // Zera o contador
+        }
+
+        function Testar() {
+            valorUsuario = document.form.chute.value; // A escolha do usu�rio
+
+            if (valorUsuario > max || valorUsuario < 0 || isNaN(valorUsuario) || valorUsuario == "") {
+                alert('Você deve escolher um valor numérico entre 0 e ' + max + '! Vamos lá...')
+                    // Aqui testa se a escolha do usu�rio est� dentro do intervalo permitido
+                    // E tamb�m testa se deixou em branco ou inseriu letras
+            } else if (numeroSecreto < valorUsuario) {
+                contador++; // Incrementa o contador
+                alert('Eu estou pensando num número que é MENOR do que o número que você chutou: ' + valorUsuario);
+            } else if (numeroSecreto > valorUsuario) {
+                contador++;
+                alert('Eu estou pensando num número que é MAIOR do que o número que você chutou: ' + valorUsuario);
+            } else {
+                contador++;
+                alert('Parabéns! você conseguiu adivinhar o número em que eu estava pensando, que era ' + numeroSecreto + ', em ' + contador + ' tentativa(s). Agora vou pensar em outro número...');
+                if (contador < record[nivel]) {
+                    record[nivel] = contador;
+                    AtualizarRecord();
+                    alert('É isso aí! você fez um novo record no nível ' + n[nivel] + '!');
+                }
+                Pensar();
+            }
+            document.form.chute.value = ""; // Limpa o campo p/ facilitar a vida do usu�rio
+            document.form.chute.focus();
+            return false; // Retorna falso, isto �, n�o submete o formul�rio
+        }
+
+        function MudarNivel() { // Esta fun��o � usada para mudar o nível de dificuldade, sendo chamada no evento onchange
+            nivel = document.form.dificuldade.value; // Atualiza o nível
+            max = Math.pow(10, nivel); // Atualiza o valor m�ximo permitido
+            alert('Eu tinha pensado no ' + numeroSecreto + '. Agora, no nível ' + n[nivel] + ' escolha um número entre 1 e ' + max);
+            document.form.chute.focus();
+            Pensar(); // O PC "pensa" em outro número, logo zera o contador
+        }
+
+        function InicioRecord() {
+            record = new Array;
+            record[1] = record[2] = record[3] = record[4] = record[5] = record[6] = 9999; // Inicializa as vari�veis
+        }
+
+        function AtualizarRecord() {
+            document.form.n1.value = record[1]; // Atualiza os recordes
+            document.form.n2.value = record[2];
+            document.form.n3.value = record[3];
+            document.form.n4.value = record[4];
+            document.form.n5.value = record[5];
+            document.form.n6.value = record[6];
+        }
+        //-->
+    </script>
+</head>
+
+<body style="display:flex;justify-content:center;align-items:center;" onload="document.form.chute.focus(); InicioRecord()">
+    <div align="center">
+        <span class="titulo">Guess What  Jogo de Adivinhação</span><br />
+        <h4>nível muito fácil: de 1 a 10;<br/>nível fácil: de 1 a 100;<br/>nível médio: de 1 a 1000;<br/>nível difácil: de 1 a 10000;<br/>nível muito difácil: de 1 a 100000;<br/>nível quase impossível: de 1 a 1000000;</h4>
+
+        <form name="form" onsubmit="return Testar()" method="post" action="#">
+            nível de dificuldade:
+            <select name="dificuldade" onchange="MudarNivel()">
+        <option value="1" selected>Muito fácil</option>
+        <option value="2">fácil</option>
+        <option value="3">médio</option>
+        <option value="4">Difácil</option>
+        <option value="5">Muito difácil</option>
+        <option value="6">Quase impossível</option>        
+      </select><br /><br /> Chute um valor: <input type="text" size="6" name="chute" />&nbsp;&nbsp;
+            <input type="submit" name="arriscar" value="Arriscar!" onmouseover="style.color = '#FF0000'" onmouseout="style.color = ''" />&nbsp;&nbsp;
+            <input type="button" value="Desistir!" onclick="alert('O número que eu escolhi foi: ' + numeroSecreto + '. Pena que você desistiu! Tente novamente, eu vou pensar em outro número, OK?'); Pensar()" /><br /><br />
+
+            <table cellspacing="0" cellpadding="3" summary="records">
+                <!-- Tabela de records -->
+                <tr class="superior">
+                    <td>nível
+                    </td>
+                    <td>Recorde
+                    </td>
+                </tr>
+                <tr>
+                    <td>Muito fácil
+                    </td>
+                    <td><input type="text" size="3" name="n1" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>fácil
+                    </td>
+                    <td><input type="text" size="3" name="n2" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>médio
+                    </td>
+                    <td><input type="text" size="3" name="n3" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Difácil
+                    </td>
+                    <td><input type="text" size="3" name="n4" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Muito Difácil
+                    </td>
+                    <td><input type="text" size="3" name="n5" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quase impossível
+                    </td>
+                    <td><input type="text" size="3" name="n6" value="9999" readonly="readonly" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <br /><br />
+        <div style="font-size: 13px"><span style="color: #FF0000">Dica</span>: ganhe tempo pressionando ENTER para jogar</div>
+    </div>
+    <br>
+    <div style="position: absolute;
+    bottom: 0;
+    width: 98%;
+    text-align: center;
+    margin-bottom: 25px;">
+        <form action="/index.html">
+            <input type="submit" value="Voltar para o Menu de jogos" />
+        </form>
+    </div>
+</body>
+
+
+</html>

@@ -2,286 +2,327 @@
 
 <head>
 
-<title>Código - Central Masters</title>
+    <title>Jogo da Velha</title>
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-9278165302180733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
-<script language="LiveScript">
-
+    <script language="LiveScript">
         <!-- 
 
-		step = 0;
+        step = 0;
 
-		diff=3;
+        diff = 3;
 
-		// change board when button is clicked
+        // change board when button is clicked
 
         function clear_all(form) {
 
-			step = 0;
+            step = 0;
 
-			for (i=0;i<9; ++i) {
+            for (i = 0; i < 9; ++i) {
 
-				position="a"+i;
+                position = "a" + i;
 
-				form[position].value="";
+                form[position].value = "";
 
-			}
+            }
 
-		}
+        }
 
-		// change board when button is clicked
+        // change board when button is clicked
 
         function clickit(field) {
 
-		if (step == -1) {alert("Reset e jogue novamente"); return;}
+            if (step == -1) {
+                alert("Reset e jogue novamente");
+                return;
+            }
 
-        position=field.name.substring(1,2,1);
+            position = field.name.substring(1, 2, 1);
 
-        position = 'a'+position;
+            position = 'a' + position;
 
-		if (field.form[position].value !="") {alert("Não pode mover pra cá"); return;}
+            if (field.form[position].value != "") {
+                alert("Nï¿½o pode mover pra cï¿½");
+                return;
+            }
 
-        field.form[position].value="X";
+            field.form[position].value = "X";
 
-        if (eval_pos(field.form)) {
+            if (eval_pos(field.form)) {
 
-			field.form.output.value="Você venceu!!"; 
+                field.form.output.value = "Vocï¿½ venceu!!";
 
-			step = -1;
+                step = -1;
 
-			return;
+                return;
 
-		}
+            }
 
-        position=get_move(field.form);
+            position = get_move(field.form);
 
-        field.form.output.value='I moved to ' + position.substring(1,2,1);
+            field.form.output.value = 'I moved to ' + position.substring(1, 2, 1);
 
-		if (position=="") {
+            if (position == "") {
 
-			field.form.output.value="Não houve vencedor."; 
+                field.form.output.value = "Nï¿½o houve vencedor.";
 
-			step = -1;
+                step = -1;
 
-			return;
+                return;
 
-		}
+            }
 
-        field.form[position].value="O";
+            field.form[position].value = "O";
 
-        if (eval_pos(field.form)) {
+            if (eval_pos(field.form)) {
 
-			field.form.output.value="Você perdeu!";
+                field.form.output.value = "Vocï¿½ perdeu!";
 
-			step = -1;
+                step = -1;
 
-		}
+            }
 
         }
 
 
 
-		// see if there is a winner
+        // see if there is a winner
 
         function eval_pos(form) {
 
-   		if ((form.a0.value!="" && 
+            if ((form.a0.value != "" &&
 
-			form.a0.value==form.a3.value && form.a0.value==form.a6.value)||
+                    form.a0.value == form.a3.value && form.a0.value == form.a6.value) ||
 
-   		   (form.a0.value!="" 
+                (form.a0.value != ""
 
-			&& form.a0.value==form.a1.value && form.a0.value==form.a2.value) ||
+                    &&
+                    form.a0.value == form.a1.value && form.a0.value == form.a2.value) ||
 
-   		   (form.a0.value!="" 
+                (form.a0.value != ""
 
-			&& form.a0.value==form.a4.value && form.a0.value==form.a8.value) ||
+                    &&
+                    form.a0.value == form.a4.value && form.a0.value == form.a8.value) ||
 
-   		   (form.a1.value!="" 
+                (form.a1.value != ""
 
-			&& form.a1.value==form.a4.value && form.a1.value==form.a7.value) ||
+                    &&
+                    form.a1.value == form.a4.value && form.a1.value == form.a7.value) ||
 
-   		   (form.a2.value!="" 
+                (form.a2.value != ""
 
-			&& form.a2.value==form.a5.value && form.a2.value==form.a8.value) ||
+                    &&
+                    form.a2.value == form.a5.value && form.a2.value == form.a8.value) ||
 
-   		   (form.a2.value!="" 
+                (form.a2.value != ""
 
-			&& form.a2.value==form.a4.value && form.a2.value==form.a6.value) ||
+                    &&
+                    form.a2.value == form.a4.value && form.a2.value == form.a6.value) ||
 
-   		   (form.a3.value!="" 
+                (form.a3.value != ""
 
-			&& form.a3.value==form.a4.value && form.a3.value==form.a5.value) ||
+                    &&
+                    form.a3.value == form.a4.value && form.a3.value == form.a5.value) ||
 
-   		   (form.a6.value!="" 
+                (form.a6.value != ""
 
-			&& form.a6.value==form.a7.value && form.a6.value==form.a8.value))
+                    &&
+                    form.a6.value == form.a7.value && form.a6.value == form.a8.value))
 
-			return true;
+                return true;
 
-		else	
+            else
 
-           return false;
+                return false;
 
         }
 
 
 
-		function f(a) {
+        function f(a) {
 
-		if (a == "") return "."; else return a;
+            if (a == "") return ".";
+            else return a;
 
-		}
+        }
 
 
 
-		// get position for move.
+        // get position for move.
 
-        function comp_move(form,player,weight,depth) {
+        function comp_move(form, player, weight, depth) {
 
             var cost;
 
-			var bestcost=-2;
+            var bestcost = -2;
 
-			var position;
+            var position;
 
-			var newplayer;
+            var newplayer;
 
-			if (player=="X") newplayer="O"; else newplayer="X";
+            if (player == "X") newplayer = "O";
+            else newplayer = "X";
 
-			if (depth==diff) return 0;
+            if (depth == diff) return 0;
 
-			if (eval_pos(form)) return 1;
+            if (eval_pos(form)) return 1;
 
-			for (var i=0; i<9; ++i) {
+            for (var i = 0; i < 9; ++i) {
 
-				position='a'+i;
+                position = 'a' + i;
 
-				if (form[position].value != "")
+                if (form[position].value != "")
 
-					continue;
+                    continue;
 
-				form[position].value=player;
+                form[position].value = player;
 
-				cost = comp_move(form,newplayer, -weight, depth+1);
+                cost = comp_move(form, newplayer, -weight, depth + 1);
 
-				if (cost > bestcost) {
+                if (cost > bestcost) {
 
-					bestcost=cost;
+                    bestcost = cost;
 
-					if (cost==1) i=9;
+                    if (cost == 1) i = 9;
 
-				}
+                }
 
-				form[position].value="";
+                form[position].value = "";
 
-			}
+            }
 
-			if (bestcost==-2) bestcost=0;
+            if (bestcost == -2) bestcost = 0;
 
-			return(-bestcost);
+            return (-bestcost);
 
-		}
+        }
 
 
 
-		// get position for move.
+        // get position for move.
 
         function get_move(form) {
 
-			var cost;
+            var cost;
 
-			var bestcost=-2;
+            var bestcost = -2;
 
-			bestmove="";
+            bestmove = "";
 
-			// don't think about first move.
+            // don't think about first move.
 
-			if (step++ == 0)
+            if (step++ == 0)
 
-				if (form.a4.value=="") 
+                if (form.a4.value == "")
 
-					return "a4";
+                    return "a4";
 
-				else 
+                else
 
-				if (form.a0.value=="") 
+            if (form.a0.value == "")
 
-					return "a0";
+                return "a0";
 
 
 
-			for (var i=0; i<9; ++i) {
+            for (var i = 0; i < 9; ++i) {
 
-				localposition='a'+i;
+                localposition = 'a' + i;
 
-				if (form[localposition].value != "")
+                if (form[localposition].value != "")
 
-					continue;
+                    continue;
 
-				form[localposition].value="O";
+                form[localposition].value = "O";
 
-				cost=comp_move(form,"X", -1, 0);
+                cost = comp_move(form, "X", -1, 0);
 
-				if (cost > bestcost) {
+                if (cost > bestcost) {
 
-					if (cost==1) i=9;
+                    if (cost == 1) i = 9;
 
-					bestmove=localposition;
+                    bestmove = localposition;
 
-					bestcost=cost;
+                    bestcost = cost;
 
-				}
+                }
 
-				form[localposition].value="";
+                form[localposition].value = "";
 
-			}
+            }
 
-			return bestmove;
+            return bestmove;
 
         }
 
 
 
-		// complain if user attempts to change board
+        // complain if user attempts to change board
 
         function complain(field) {
 
-			field.form.output.focus(); // put focus eleswhere
+            field.form.output.focus(); // put focus eleswhere
 
-			alert("Clique no botão");
+            alert("Clique no botï¿½o");
 
         }
 
-	//a href="http://www.ucsd.edu/
+        //a href="http://www.ucsd.edu/
 
         // the end -->
+    </script>
 
-      </script>
 
+    <form>
+        <div align="center">
+            <center>
+                <p><input type="text" size="1" name="a0" onfocus="complain(this)"> <input type="button" name="b0" onclick="clickit(this)"> <input type="text" size="1" name="a1" onfocus="complain(this)"> <input type="button" name="b1" onclick="clickit(this)">                    <input type="text" size="1" name="a2" onfocus="complain(this)"> <input type="button" name="b2" onclick="clickit(this)"> <br>
+                    <input type="text" size="1" name="a3" onfocus="complain(this)"> <input type="button" name="b3" onclick="clickit(this)"> <input type="text" size="1" name="a4" onfocus="complain(this)"> <input type="button" name="b4" onclick="clickit(this)">                    <input type="text" size="1" name="a5" onfocus="complain(this)"> <input type="button" name="b5" onclick="clickit(this)"> <br>
+                    <input type="text" size="1" name="a6" onfocus="complain(this)"> <input type="button" name="b6" onclick="clickit(this)"> <input type="text" size="1" name="a7" onfocus="complain(this)"> <input type="button" name="b7" onclick="clickit(this)">                    <input type="text" size="1" name="a8" onfocus="complain(this)"> <input type="button" name="b8" onclick="clickit(this)"> <br>
+                    <br>
+                    <br>
+                    <font size="3" face="Comic Sans MS, arial">Mensagem: <input type="text" size="20" name="output"><br>
+                        <br> Nï¿½vel de Dificuldade: <select name="difficulty" size="1" onchange="diff=form.difficulty[form.difficulty.selectedIndex].value;">
+    <option value="1"> Muito Fï¿½cil </option>
+    <option value="2"> Fï¿½cil </option>
+    <option selected value="3"> Mï¿½dio </option>
+    <option value="4"> Difï¿½cil </option>
+  </select> </font>
+                </p>
+            </center>
+        </div>
+        <div align="center">
+            <center>
+                <p>
+                    <font size="3" face="Comic Sans MS, arial"><input type="button" value="Computador Movendo Primeiro" onclick="
 
-<form>
-  <div align="center"><center><p><input type="text" size="1" name="a0" onfocus="complain(this)"> <input type="button" name="b0" onclick="clickit(this)"> <input type="text" size="1" name="a1" onfocus="complain(this)"> <input type="button" name="b1" onclick="clickit(this)"> <input type="text" size="1" name="a2" onfocus="complain(this)"> <input type="button" name="b2" onclick="clickit(this)"> <br>
-  <input type="text" size="1" name="a3" onfocus="complain(this)"> <input type="button" name="b3" onclick="clickit(this)"> <input type="text" size="1" name="a4" onfocus="complain(this)"> <input type="button" name="b4" onclick="clickit(this)"> <input type="text" size="1" name="a5" onfocus="complain(this)"> <input type="button" name="b5" onclick="clickit(this)"> <br>
-  <input type="text" size="1" name="a6" onfocus="complain(this)"> <input type="button" name="b6" onclick="clickit(this)"> <input type="text" size="1" name="a7" onfocus="complain(this)"> <input type="button" name="b7" onclick="clickit(this)"> <input type="text" size="1" name="a8" onfocus="complain(this)"> <input type="button" name="b8" onclick="clickit(this)"> <br>
-  <br>
-  <br>
-  <font size="3" face="Comic Sans MS, arial">Mensagem: <input type="text" size="20" name="output"><br>
-  <br>
-  Nível de Dificuldade: <select name="difficulty" size="1" onchange="diff=form.difficulty[form.difficulty.selectedIndex].value;">
-    <option value="1"> Muito Fácil </option>
-    <option value="2"> Fácil </option>
-    <option selected value="3"> Médio </option>
-    <option value="4"> Difícil </option>
-  </select> </font></p>
-  </center></div><div align="center"><center><p><font size="3" face="Comic Sans MS, arial"><input type="button" value="Computador Movendo Primeiro" onclick="
+		if (!step++) this.form.a4.value='O';"> </font>
+                </p>
+            </center>
+        </div>
+        <div align="center">
+            <center>
+                <p>
+                    <font size="3" face="Comic Sans MS, arial"><input type="reset" value="Reiniciar" onclick="clear_all(this.form)"> </font>
+                </p>
+            </center>
+        </div>
+    </form>
 
-		if (!step++) this.form.a4.value='O';"> </font></p>
-  </center></div><div align="center"><center><p><font size="3" face="Comic Sans MS, arial"><input type="reset" value="Reiniciar" onclick="clear_all(this.form)"> </font></p>
-  </center></div>
-</form>
+    <p align="center">&nbsp;</p>
 
-<p align="center">&nbsp;</p>
+    <div style="position: absolute;
+    bottom: 0;
+    width: 98%;
+    text-align: center;
+    margin-bottom: 5px;">
+        <form action="/index.html">
+            <input type="submit" value="Voltar para o Menu de jogos" />
+        </form>
+    </div>
 </body>
+
 </html>
