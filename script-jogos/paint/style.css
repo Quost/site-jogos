@@ -14,6 +14,13 @@ canvas {
     background: white;
 }
 
+#paint-app {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    border: 2px black solid;
+}
+
 
 /* For any shape tools that need a live preview */
 
