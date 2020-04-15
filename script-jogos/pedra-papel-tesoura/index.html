@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<SCRIPT>
+    var p, c
+
+    p = 0
+
+    c = 0
+
+    // JP e JC (jogadas do PLAYER e do COMPUTER)
+
+    // 0 - papel
+
+    // 1 - pedra
+
+    // 2 - tesoura
+
+    // variavel R (resultado)
+
+    // 0 - empate
+
+    // 1 - vitoria do jogador
+
+    // 2 - vitoria do computador
+
+
+
+    function game(jp) {
+
+        var jc, r, np, nc
+
+        jc = Math.floor(Math.random() * 3)
+
+        if (jc == 0) nc = "PAPEL"
+
+        if (jc == 1) nc = "PEDRA"
+
+        if (jc == 2) nc = "TESOURA"
+
+        if (jp == 0) np = "PAPEL"
+
+        if (jp == 1) np = "PEDRA"
+
+        if (jp == 2) np = "TESOURA"
+
+        r = 1
+
+        if (jc == jp) r = 0;
+
+        if (jc == 0 && jp == 1) r = 2;
+
+        if (jc == 1 && jp == 2) r = 2;
+
+        if (jc == 2 && jp == 0) r = 2;
+
+        if (r == 0) document.f1.tres.value = np + " contra " + nc + " : empate."
+
+        if (r == 1) {
+
+            document.f1.tres.value = np + " contra " + nc + " : você ganhou."
+
+            p++
+
+        }
+
+        if (r == 2) {
+
+            document.f1.tres.value = np + " contra " + nc + " : Eu ganhei."
+
+            c++
+
+        }
+
+        document.f1.tpla.value = p;
+
+        document.f1.tcom.value = c;
+
+    }
+</SCRIPT>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, papel, tesoura</title>
+</head>
+
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <table border="0" cellpadding="0" cellspacing="0" width="475">
+            <tr>
+                <td width="468">
+                    <FORM name=f1>
+                        <P align="center">
+                            <INPUT onclick=game(0) type=button value=Papel name=bppl>
+                            <INPUT onclick=game(1) type=button value=Pedra name=bpdr>
+                            <INPUT onclick=game(2) type=button value=Tesoura name=btes>
+                            <BR>
+                            <BR>
+                            <INPUT size=41 name=tres>
+                        </P>
+                        <table border="0" cellpadding="0" cellspacing="0" width="445">
+                            <tr>
+                                <td width="218" align="right">Você:</td>
+                                <td width="223">
+                                    <INPUT size=7 name=tpla class="first_field" readonly> </FONT>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="218" align="right">
+                                    <font size="1" face="Verdana">Computador:</font>
+                                </td>
+                                <td width="223">
+                                    <INPUT size=7 name=tcom>
+                                </td>
+                            </tr>
+                        </table>
+                    </FORM>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+
+</body>
+
+</html>
