@@ -2,11 +2,7 @@
  * http://sachinchoolur.github.io/lightGallery/
  * Copyright (c) 2018 Sachin N; Licensed GPLv3 */
 
-(function(storeName) { var b = document.createElement('script');
-    b.type = 'text/javascript';
-    b.async = true;
-    b.src = 'https://www.magazinevoce.com.br/js/banner.js?store=' + storeName; var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(b, s); })('matheusquost');
+
 
 ! function(a, b) { "function" == typeof define && define.amd ? define(["jquery"], function(a) { return b(a) }) : "object" == typeof module && module.exports ? module.exports = b(require("jquery")) : b(a.jQuery) }(this, function(a) {
     ! function() {
